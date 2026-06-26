@@ -5,7 +5,7 @@ A Next.js storefront for selling the **Rest Well Baby Infant Sleep System** PDF 
 ## Features
 
 - Branded landing page with product details, pricing, and FAQ
-- Stripe Checkout (one-time $47 purchase)
+- Stripe Checkout (one-time $24 purchase)
 - Secure download — only verified paid sessions can access the ZIP
 - Success page with re-download support
 - Stripe webhook for purchase logging

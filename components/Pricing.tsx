@@ -35,7 +35,9 @@ export function Pricing() {
                   ${PRODUCT.price}
                 </span>
               </div>
-              <p className="mt-2 text-sm text-moon-lt">One-time payment · USD</p>
+              <p className="mt-2 text-sm text-moon-lt">
+                One-time payment · USD · Less than most single sleep books
+              </p>
 
               <div className="mt-8">
                 <CheckoutButton size="lg" className="w-full justify-center" />

@@ -36,6 +36,7 @@ export function Hero() {
             <CheckoutButton size="lg" />
             <p className="text-sm text-moon-lt">
               <span className="font-semibold text-white">${PRODUCT.price}</span>{" "}
+              <span className="text-moon line-through">${PRODUCT.compareAt}</span>{" "}
               · Instant download · 14-day guarantee
             </p>
           </div>

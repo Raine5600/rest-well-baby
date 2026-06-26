@@ -10,8 +10,8 @@ export const PRODUCT = {
   fullName: "Rest Well Baby Infant Sleep System",
   description:
     "A complete PDF toolkit for parents of babies 0–12 months — science, schedules, the 4-month shift, sleep training guides, and printable worksheets.",
-  price: 47,
-  compareAt: 97,
+  price: 24,
+  compareAt: 49,
   currency: "usd",
   fileName: "Rest_Well_Baby_Sleep_System_Package.zip",
   fileLabel: "Full PDF Package (ZIP)",
