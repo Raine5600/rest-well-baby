@@ -1,0 +1,66 @@
+"use client";
+
+import { useState } from "react";
+
+type Props = {
+  size?: "md" | "lg";
+  className?: string;
+  label?: string;
+};
+
+export function CheckoutButton({
+  size = "md",
+  className = "",
+  label = "Get instant access",
+}: Props) {
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const sizeClasses =
+    size === "lg"
+      ? "px-8 py-4 text-base"
+      : "px-6 py-3 text-sm";
+
+  async function handleCheckout() {
+    setLoading(true);
+    setError(null);
+    try {
+      const res = await fetch("/api/checkout", { method: "POST" });
+      const data = await res.json();
+      if (!res.ok) {
+        throw new Error(data.error || "Checkout failed");
+      }
+      if (data.url) {
+        window.location.href = data.url;
+        return;
+      }
+      throw new Error("No checkout URL returned");
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Something went wrong");
+      setLoading(false);
+    }
+  }
+
+  return (
+    <div className={className}>
+      <button
+        type="button"
+        onClick={handleCheckout}
+        disabled={loading}
+        className={`inline-flex items-center gap-2 rounded-full bg-sage font-semibold text-white shadow-md transition hover:bg-[#4d7762] disabled:cursor-not-allowed disabled:opacity-70 ${sizeClasses}`}
+      >
+        {loading ? (
+          <>
+            <span className="h-4 w-4 animate-spin rounded-full border-2 border-white/30 border-t-white" />
+            Redirecting…
+          </>
+        ) : (
+          label
+        )}
+      </button>
+      {error ? (
+        <p className="mt-2 text-sm text-rose">{error}</p>
+      ) : null}
+    </div>
+  );
+}
