@@ -6,7 +6,7 @@ export const BRAND = {
 
 export const SUMMER_DEAL = {
   active: true,
-  label: "Limited Summer Deal",
+  label: "SUMMER DEAL!",
   headline: "Full sleep system just $24",
   endsAt: "2026-08-31T23:59:59-04:00",
   badge: "Summer Deal — ends Aug 31",
