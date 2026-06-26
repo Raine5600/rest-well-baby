@@ -1,4 +1,5 @@
 import { BRAND } from "@/lib/product";
+import { getContactEmail } from "@/lib/site";
 
 export function Footer() {
   return (
@@ -13,10 +14,10 @@ export function Footer() {
         <div className="text-sm text-ink-mid">
           <p className="font-semibold text-navy-dark">Support</p>
           <a
-            href="mailto:support@restwellbaby.com"
+            href={`mailto:${getContactEmail("support")}`}
             className="mt-2 block transition hover:text-sage"
           >
-            support@restwellbaby.com
+            {getContactEmail("support")}
           </a>
           <p className="mt-6 max-w-xs text-xs leading-relaxed text-ink-lt">
             Not medical advice. Consult your pediatrician for health concerns.

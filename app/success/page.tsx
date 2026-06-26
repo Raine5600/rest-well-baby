@@ -6,6 +6,7 @@ import { DownloadButton } from "@/components/DownloadButton";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PACKAGE_ITEMS, PRODUCT } from "@/lib/product";
+import { getContactEmail } from "@/lib/site";
 import { getStripe } from "@/lib/stripe";
 
 type Props = {
@@ -84,7 +85,7 @@ export default async function SuccessPage({ searchParams }: Props) {
           <p className="mt-8 text-sm text-ink-lt">
             Need help?{" "}
             <a
-              href="mailto:support@restwellbaby.com"
+              href={`mailto:${getContactEmail("support")}`}
               className="font-medium text-sage hover:underline"
             >
               Email support
