@@ -1,4 +1,4 @@
-import { PRODUCT, PACKAGE_ITEMS } from "@/lib/product";
+import { PACKAGE_ITEMS, PRODUCT, SUMMER_DEAL } from "@/lib/product";
 import { CheckoutButton } from "./CheckoutButton";
 
 export function Pricing() {
@@ -20,9 +20,9 @@ export function Pricing() {
 
         <div className="mx-auto mt-12 max-w-lg">
           <div className="overflow-hidden rounded-3xl border border-white/10 bg-white/5 shadow-2xl backdrop-blur-sm">
-            <div className="border-b border-white/10 bg-sage/20 px-8 py-4 text-center">
-              <p className="text-sm font-semibold uppercase tracking-wider text-sage-lt">
-                Best value
+            <div className="border-b border-white/10 bg-gradient-to-r from-amber/80 to-sage/60 px-8 py-4 text-center">
+              <p className="text-sm font-bold uppercase tracking-wider text-white">
+                ☀️ {SUMMER_DEAL.label} — limited time
               </p>
             </div>
             <div className="px-8 py-10 text-center">
@@ -36,7 +36,7 @@ export function Pricing() {
                 </span>
               </div>
               <p className="mt-2 text-sm text-moon-lt">
-                One-time payment · USD · Less than most single sleep books
+                Summer price ends Aug 31 · One-time payment · Instant download
               </p>
 
               <div className="mt-8">

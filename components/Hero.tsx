@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { BRAND, PRODUCT } from "@/lib/product";
+import { BRAND, PRODUCT, SUMMER_DEAL } from "@/lib/product";
 import { CheckoutButton } from "./CheckoutButton";
 
 export function Hero() {
@@ -21,9 +21,14 @@ export function Hero() {
 
       <div className="relative mx-auto grid max-w-6xl gap-12 px-5 py-16 sm:px-8 lg:grid-cols-2 lg:items-center lg:py-24">
         <div>
-          <p className="mb-4 inline-flex rounded-full bg-sage/20 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-sage-lt">
-            For parents of babies 0–12 months
-          </p>
+          <div className="mb-4 flex flex-wrap items-center gap-2">
+            <p className="inline-flex rounded-full bg-amber/90 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-white shadow-sm">
+              ☀️ {SUMMER_DEAL.badge}
+            </p>
+            <p className="inline-flex rounded-full bg-sage/20 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-sage-lt">
+              Ages 0–12 months
+            </p>
+          </div>
           <h1 className="font-display text-4xl font-semibold leading-[1.1] sm:text-5xl lg:text-[3.25rem]">
             Finally, a clear path through baby sleep chaos
           </h1>

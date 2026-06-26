@@ -1,4 +1,4 @@
-import { Header } from "@/components/Header";
+import { SiteChrome } from "@/components/SiteChrome";
 import { Hero } from "@/components/Hero";
 import { Problem } from "@/components/Problem";
 import { WhatsIncluded } from "@/components/WhatsIncluded";
@@ -9,7 +9,7 @@ import { Footer } from "@/components/Footer";
 export default function HomePage() {
   return (
     <>
-      <Header />
+      <SiteChrome />
       <main>
         <Hero />
         <Problem />

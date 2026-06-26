@@ -4,6 +4,14 @@ export const BRAND = {
   domain: "restwellbaby.com",
 } as const;
 
+export const SUMMER_DEAL = {
+  active: true,
+  label: "Limited Summer Deal",
+  headline: "Full sleep system just $24",
+  endsAt: "2026-08-31T23:59:59-04:00",
+  badge: "Summer Deal — ends Aug 31",
+} as const;
+
 export const PRODUCT = {
   id: "infant-sleep-system",
   name: "Infant Sleep System",

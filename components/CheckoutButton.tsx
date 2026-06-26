@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { PRODUCT, SUMMER_DEAL } from "@/lib/product";
 
 type Props = {
   size?: "md" | "lg";
@@ -11,7 +12,9 @@ type Props = {
 export function CheckoutButton({
   size = "md",
   className = "",
-  label = "Get instant access",
+  label = SUMMER_DEAL.active
+    ? `Claim summer deal — $${PRODUCT.price}`
+    : "Get instant access",
 }: Props) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
