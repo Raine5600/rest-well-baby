@@ -1,7 +1,7 @@
 export const BRAND = {
   name: "Rest Well Baby",
   tagline: "Evidence-based sleep guidance for exhausted parents",
-  domain: "getrestwellbaby.com",
+  domain: "getrestwellbaby.mom",
 } as const;
 
 export const SUMMER_DEAL = {

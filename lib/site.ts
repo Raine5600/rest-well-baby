@@ -1,7 +1,7 @@
 import { BRAND } from "./product";
 
 /** Primary domain — register at Cloudflare/Namecheap before going live */
-export const RECOMMENDED_DOMAIN = "getrestwellbaby.com";
+export const RECOMMENDED_DOMAIN = "getrestwellbaby.mom";
 
 export function getSiteUrl(): string {
   if (process.env.NEXT_PUBLIC_APP_URL) {
